@@ -42,20 +42,25 @@ h2{
 h3 {
     font-size: 30px;
 }
-body , a ,p{
+body, a, p {
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
+    color: #5a6e79;
 }
 ul.main-menu {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
+.slicknav_menu {
+	display:none;
+}
 ul.main-menu > li {
     display: inline-block;
 }
-
+.slicknav_menu ul li a {
+    color: #5a6e79;transition: color .3s ease-in-out;font-size: 16px;
+}
 ul.main-menu > li > a {
     color: #5a6e79;
     font-size: 16px;
@@ -63,29 +68,32 @@ ul.main-menu > li > a {
     display: block;
     transition: color .3s ease-in-out;
 }
-ul.main-menu > li > a:hover {
+ul.main-menu > li > a:hover , .slicknav_menu ul li a:hover {
     color: #ffc178;
 }
-ul.main-menu > li.active > a {
+ul.main-menu > li.active > a , .slicknav_menu ul li.active a{
     color: #ffc178;
+}
+#menu-container .slicknav_menu {
+    background: none;
 }
 
 .header_area {
     padding: 25px 0;
+    position: relative;
 }
 
-.hero-area h2 {
+.hero-text-table h2 {
     color: #ffc178;
-}
-.hero-area {
-    background-image: url(assets/images/slider-1.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 855px;
 }
 
 .hero-section {
     background: #FFF9F3;
+    background-image: url(assets/images/slider-1.png);
+    background-size: cover;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .department_title_section {
     position: relative;
@@ -116,7 +124,7 @@ ul.main-menu > li.active > a {
     margin-bottom: 20px;
 }
 .hero-text > .container> .row > .col-md-12 {
-    margin-top: -16%;
+    margin-top: -26%;
 }
 .div  {
     height: 500px;
@@ -327,7 +335,7 @@ a.single-service.single-service-3 h3 {
     overflow: hidden;
     position: relative;
     height: 460px;
-    width: 460px;
+    max-width: 460px;
     cursor: pointer;
     background: #fff;
 }
@@ -443,6 +451,10 @@ h3.blog-title a {
     display: block;
     transition: .3s;
 }
+
+.blog-bg, .blog-bg img {
+    width: 100%;
+}
 h3.blog-title a:hover , .blog-content a.read-more:hover{
     color: #ffc178;
     text-decoration: underline;
@@ -470,6 +482,10 @@ h3.blog-title a:hover , .blog-content a.read-more:hover{
     flex-wrap: wrap;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
+}
+.footer-wdgt form > div {
+    display: flex;
+    justify-content: center;
 }
 .widgt-title {
     font-family: 'Roboto', sans-serif;
@@ -543,9 +559,8 @@ h3.widgt-title.mb-3 {
 .footer-wdgt form {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .footer-wdgt button[type=submit] {
@@ -558,4 +573,38 @@ h3.widgt-title.mb-3 {
     border: none;
     margin: 0;
     cursor: pointer;
+}
+.footer-bottom-text p {
+    font-size: 14px;
+}
+div#menu-container {
+    position: relative;
+}
+#menu-container .slicknav_menu {
+    background-color: #FEC07E;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+}
+#menu-container .slicknav_menu .slicknav_menutxt {
+    display: none;
+
+}
+#menu-container .slicknav_menu a.slicknav_btn {
+    background-color: #FEC07E;
+}
+#menu-container .slicknav_menu ul.slicknav_nav li a:hover {
+    background: none;
+}
+#menu-container .slicknav_menu ul.slicknav_nav li a {
+    font-size: 16px;
+    color: #fff;
+    padding: 5px 40px;
+    margin: 0 0;
+}
+#menu-container .slicknav_menu ul.slicknav_nav li div.apply-now {
+    margin-bottom: 2px;
+    padding: initial;
+    box-shadow: none;
+    border: 1px solid;
 }

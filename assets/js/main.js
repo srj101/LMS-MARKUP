@@ -18,7 +18,12 @@
         });
 
 
-
+        $(function(){
+            var menucon = document.getElementById("menu-container");
+            $('#menu').slicknav({
+                appendTo: menucon
+            });
+        });
 
 
 
